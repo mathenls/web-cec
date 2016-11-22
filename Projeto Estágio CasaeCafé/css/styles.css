@@ -2,7 +2,7 @@
 {
     background-image: url("https://www.casaecafe.com/_assets/site/templates/bootstrap/img/logo-home.df02b7dd47510901386e634023886b5b.png");
     background-size: 20%;
-    background-position: calc(50% + 20px) calc(50% + 60px);
+    background-position: calc(50% + 30px) calc(50% + 60px);
     background-repeat: no-repeat;
     width: 85%;
     height: auto;
@@ -10,22 +10,24 @@
     padding-left: 20px;
     padding-right: 10px;
     overflow: hidden;
-    background-color:aqua; 
+    background-color:#009FC3; 
     float: left;
-}
 }
 
 h1 {
-    font-family: Impact,
-    font-size: 210%;
+    font-family: Helvetica,
+    font-size: 210%,
+    color: #FFFFFF;
 }
 
 h2 {
-    font-family: Impact,
-    font-size: 180%;
+    font-family: Lato, 'Helvetica Neue',
+    font-size: 130%;
+    color: #FFFFFF;
 }
 
 p {
-    font-family: Impact,
+    font-family: Lato, 'Helvetica Neue',
     font-size: 130%;
+    color: #FFFFFF;
 }
