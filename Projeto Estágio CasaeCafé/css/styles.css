@@ -1,0 +1,31 @@
+.jumbotron
+{
+    background-image: url("https://www.casaecafe.com/_assets/site/templates/bootstrap/img/logo-home.df02b7dd47510901386e634023886b5b.png");
+    background-size: 20%;
+    background-position: calc(50% + 20px) calc(50% + 60px);
+    background-repeat: no-repeat;
+    width: 85%;
+    height: auto;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 10px;
+    overflow: hidden;
+    background-color:aqua; 
+    float: left;
+}
+}
+
+h1 {
+    font-family: Impact,
+    font-size: 210%;
+}
+
+h2 {
+    font-family: Impact,
+    font-size: 180%;
+}
+
+p {
+    font-family: Impact,
+    font-size: 130%;
+}
