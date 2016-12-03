@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
 		});
 		
 		//URL with the ID parameter to make the GET request from the service
-		var url = "http://ec2-35-164-139-210.us-west-2.compute.amazonaws.com/hirers/" + IdContratante + "/opportunities";
+		var url = "http://ec2-35-164-223-211.us-west-2.compute.amazonaws.com/hirers/" + IdContratante + "/opportunities";
 
 		//Ajax call using .getJSON, to receive the json from the REST WebService
 		//To count how many job opportunities, the only thing needed is the length property of the json object returned 
@@ -30,7 +30,14 @@ jQuery(document).ready(function($) {
   						alert("Nenhuma vaga ou contratante inexistente");
 		});
 	});
+
+
 });
+
+
+
+
+
 
 
 
