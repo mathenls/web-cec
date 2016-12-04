@@ -12,10 +12,12 @@
     <!-- Custom styles for this page -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/theme.css">
     <style type="text/css"></style>
     
   </head>
 <body>
+<div class="header" style="margin-bottom: 30px">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: #26A69A">
                   <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -34,7 +36,7 @@
                         <a href="index.HTML"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>   CONSULTAR</a>
                     </li>
                     <li>
-                        <a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>  CRIAR OPORTUNIDADES</a>
+                        <a href="#"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>   CRIAR OPORTUNIDADES</a>
                     </li>
                 </ul>
             </div>
@@ -49,21 +51,21 @@
 <legend>Dados do Contratate</legend>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">ID</label>  
+  <label class="col-md-4 control-label">ID*</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="hirer[id]:number" placeholder="ID" class="form-control"  type="text">
+  <input  name="hirer[id]:number" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Nome</label> 
+  <label class="col-md-4 control-label" >Nome*</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-      <input name="hirer[name]" placeholder="Nome" class="form-control"  type="text">
+      <input required name="hirer[name]" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -73,23 +75,23 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="account_type" value="pf" /> Pessoa Física
+                                    <input required type="radio" name="hirer[account_type]" value="pf" /> Pessoa Física
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="account_type" value="pj" /> Pessoa Jurídica
+                                    <input type="radio" name="hirer[account_type]" value="pj" /> Pessoa Jurídica
                                 </label>
                             </div>
                         </div>
                     </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
+  <label class="col-md-4 control-label">E-Mail*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-        <input name="hirer[email]" placeholder="E-Mail" class="form-control"  type="text">
+        <input required name="hirer[email]" placeholder="E-Mail" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -99,7 +101,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
-        <input name="hirer[cnpj]:number" placeholder="CNPJ" class="form-control"  type="text">
+        <input name="hirer[cnpj]:number"  class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -115,11 +117,11 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Telefone</label>  
+  <label class="col-md-4 control-label">Telefone*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-        <input name="hirer[phone]" placeholder="(00)0000-0000" class="form-control" type="text">
+        <input required name="hirer[phone]" placeholder="(12)1234-5678" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -129,17 +131,17 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-        <input name="hirer[mobile_phone]" placeholder="(00)00000-0000" class="form-control" type="text">
+        <input name="hirer[mobile_phone]" placeholder="(12)12345-6789" class="form-control" type="text">
     </div>
   </div>
 </div>
 
  <div class="form-group">
-                        <label class="col-md-4 control-label">Conta ativa?</label>
+                        <label class="col-md-4 control-label">Conta ativa?*</label>
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="hirer[is_plan_active]:boolean" value= "true" /> Sim
+                                    <input required type="radio" name="hirer[is_plan_active]:boolean" value= "true" /> Sim
                                 </label>
                             </div>
                             <div class="radio">
@@ -152,24 +154,24 @@
 
 
 <legend> Dados da Oportunidade </legend>
-<!-- Text input-->
-      
+<p> *Dados obrigatórios </p>
+
 <div class="form-group">
-  <label class="col-md-4 control-label">ID da oportunidade</label>  
+  <label class="col-md-4 control-label">ID da oportunidade*</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input  name="id:number" placeholder="ID" class="form-control" type="text">
+  <input required name="id:number" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Título</label>  
+  <label class="col-md-4 control-label">Título*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
-        <input name="title" placeholder="Titulo" class="form-control" type="text">
+        <input required name="title" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -179,7 +181,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" name="description" placeholder="Descrição da oportunidade"></textarea>
+          <textarea required class="form-control" name="description" placeholder="Descrição da oportunidade"></textarea>
   </div>
   </div>
 </div>
@@ -189,7 +191,7 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="is_active:boolean" value="true" /> Sim
+                                    <input required type="radio" name="is_active:boolean" value="true" /> Sim
                                 </label>
                             </div>
                             <div class="radio">
@@ -205,7 +207,7 @@
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="is_contact_available:boolean" value= "true" /> Sim
+                                    <input required type="radio" name="is_contact_available:boolean" value= "true" /> Sim
                                 </label>
                             </div>
                             <div class="radio">
@@ -217,12 +219,12 @@
 </div>
  
 <div class="form-group"> 
-  <label class="col-md-4 control-label">Estado</label>
+  <label class="col-md-4 control-label">Estado*</label>
     <div class="col-md-4 selectContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
     <select name="location[state]" class="form-control selectpicker" >
-      <option value=" " >Selecione seu estado</option>
+      <option value=" ">Selecione seu estado</option>
       <option>AC</option>
       <option>AL</option>
       <option>AP</option>
@@ -256,31 +258,31 @@
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Cidade</label>  
+  <label class="col-md-4 control-label">Cidade*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-  <input name="location[city]" placeholder="city" class="form-control"  type="text">
+  <input required name="location[city]" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">CEP</label>  
+  <label class="col-md-4 control-label">CEP*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="location[zipcode]" placeholder="CEP" class="form-control"  type="text">
+     <input required name="location[zipcode]" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Tipo Endereço</label>  
+  <label class="col-md-4 control-label">Tipo Endereço*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="location[address_type]" placeholder="Tipo de Endereço" class="form-control"  type="text">
+     <input required name="location[address_type]" placeholder="Rua, Av, Alameda, Logradouro, Travessa..." class="form-control"  type="text">
     </div>
   </div>
   </div>
@@ -288,73 +290,73 @@
 
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Endereço</label>  
+  <label class="col-md-4 control-label">Endereço*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="location[address]" placeholder="Tipo de Endereço" class="form-control"  type="text">
-    </div>
-  </div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Bairro</label>  
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="location[neighborhood]" placeholder="Bairro" class="form-control"  type="text">
+     <input name="location[address]" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
+<div class="form-group">
+  <label class="col-md-4 control-label">Bairro*</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+     <input required name="location[neighborhood]" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Latitude</label>  
+  <label class="col-md-4 control-label">Latitude*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-     <input name="location[latitude]:number" placeholder="Latitude" class="form-control"  type="text">
+     <input required name="location[latitude]:number" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Longitude</label>  
+  <label class="col-md-4 control-label">Longitude*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-     <input name="location[longitude]:number" placeholder="Longitude" class="form-control"  type="text">
+     <input required name="location[longitude]:number" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Id da Cidade</label>  
+  <label class="col-md-4 control-label">Id da Cidade*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="location[city_id]" placeholder="ID da cidade" class="form-control"  type="text">
+     <input required name="location[city_id]" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Frequência</label>  
+  <label class="col-md-4 control-label">Frequência*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="frequency" placeholder="Frequencia" class="form-control"  type="text">
+     <input required name="frequency" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 
 <div class="form-group">
-                        <label class="col-md-4 control-label">É automático?</label>
+                        <label class="col-md-4 control-label">É automático?*</label>
                         <div class="col-md-4">
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="is_automatic:boolean" value= "true" /> Sim
+                                    <input required type="radio" name="is_automatic:boolean" value= "true" /> Sim
                                 </label>
                             </div>
                             <div class="radio">
@@ -370,67 +372,67 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="score:number" placeholder="Frequencia" class="form-control"  type="text">
+     <input name="score:number" class="form-control"  type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">ID da Categoria</label>  
+  <label class="col-md-4 control-label">ID da Categoria*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="category[id]:number" placeholder="ID da Categoria" class="form-control" type="text">
+     <input required name="category[id]:number" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Categoria</label>  
+  <label class="col-md-4 control-label">Categoria*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="category[name]" placeholder="Nome da Categoria" class="form-control" type="text">
+     <input required name="category[name]" placeholder="Nome da Categoria" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Requisição Salarial</label>  
+  <label class="col-md-4 control-label">Requisição Salarial*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="salary_requirements" placeholder="Requisiçao Salarial" class="form-control" type="text">
+     <input required name="salary_requirements" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Começa</label>  
+  <label class="col-md-4 control-label">Começa*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="starts" placeholder="Começa" class="form-control" type="text">
+     <input requied name="starts" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Número de Candidatos</label>  
+  <label class="col-md-4 control-label">Número de Candidatos*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="amount_candidates:number" placeholder="Nº de Candidatos" class="form-control" type="text">
+     <input required name="amount_candidates:number" class="form-control" type="text">
     </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Número de Visualizações</label>  
+  <label class="col-md-4 control-label">Número de Visualizações*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="amount_visualizations:number" placeholder="Nº de Visualizações" class="form-control" type="text">
+     <input required name="amount_visualizations:number" class="form-control" type="text">
     </div>
   </div>
 </div>
@@ -441,27 +443,27 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-          <textarea class="form-control" name="feedback" placeholder="Feedback sobre a oportunidade"></textarea>
+          <textarea class="form-control" name="O que achou da oportunidade?" placeholder="Feedback sobre a oportunidade"></textarea>
   </div>
   </div>
 </div>
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Pretensão Salarial</label>  
+  <label class="col-md-4 control-label">Pretensão Salarial*</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="salary_research" placeholder="Pretensão Salarial" class="form-control" type="text">
+     <input required name="salary_research" class="form-control" type="text">
     </div>
   </div>
 </div>
 
-<div class="form-group hidden">
+<div class="form-group">
   <label class="col-md-4 control-label">Caracteristicas</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon hidden"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="characteristics[]:array" placeholder="Caracteristicas" class="form-control" type="text" value="[]">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+     <input name="characteristics[]" class="form-control" type="text" value=" ">
     </div>
   </div>
 </div>
@@ -471,24 +473,22 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-     <input name="relevancy" placeholder="Relevancia" class="form-control" type="text">
+     <input name="relevancy" class="form-control" type="text">
     </div>
   </div>
 </div>  
 
-<!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div> -->
-
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button id="submitForm" type="button" class="btn btn-warning" >Send<span class="glyphicon glyphicon-send"></span></button>
+    <button id="submitForm" class="btn btn-warning" >Send<span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
 </fieldset>
 </form>
 </div>
-    </div><!-- /.container -->
+</div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -502,11 +502,16 @@
 
 <script type="text/javascript">
 
-
   $("#submitForm").click(function(event)
   {
 
-    var obj = $("#opportunity_form").serializeJSON();
+    var emptyStringsAndZerosToNulls = function(val, inputName) {
+      if (val === "") return null; // parse empty strings as nulls
+      if (val === 0)  return null; // parse 0 as null
+      return val;
+  }
+
+    var obj = $("#opportunity_form").serializeJSON({parseWithFunction: emptyStringsAndZerosToNulls, parseNumbers: true});
 
     var jsonString = JSON.stringify(obj);
 
